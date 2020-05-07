@@ -1,4 +1,4 @@
-#import numpy as np
+
 entrada = "10 8 2 3 5 1 20 305 030"
 
 #usando apenas funcoes built-in
@@ -11,12 +11,6 @@ def string_para_lista(entrada):
        t = int(lista_de_string[i]) #convertendo para tipo inteiro item a item
        lista_numerica.append(t) #acrescentando elemento a elemento
     return lista_numerica
-
-"""usando numpy
-def string_para_lista(entrada):
-    lista_de_string = entrada.split()
-    lista_numerica = np.array(lista_de_string,dtype=int)
-    return lista_numerica"""
 
 def bubble_sort(lista_numerica):
     n = len(lista_numerica) #determina o tamanho da lista
@@ -31,12 +25,13 @@ def lista_para_string(lista):
     saida = ' '.join(map(str,lista))
     return saida
 
-lista_numerica = string_para_lista(entrada)
-print(lista_numerica)
+if __name__ == "__main__":
+    lista_numerica = string_para_lista(entrada)
+    print(lista_numerica)
 
-lista_numerica = bubble_sort(lista_numerica)
-print(lista_numerica)
+    lista_numerica = bubble_sort(lista_numerica)
+    print(lista_numerica)
 
-saida = lista_para_string(lista_numerica)
-print(saida)
+    saida = lista_para_string(lista_numerica)
+    print(saida)
 
